@@ -1,0 +1,6 @@
+# ignoring venv
+venv
+
+# ignoring pyenv variables
+.python-version
+
