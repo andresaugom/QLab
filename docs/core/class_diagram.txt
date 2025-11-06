@@ -1,0 +1,46 @@
+@startuml
+class State {
+    + vector
+    + normalize()
+    + density_matrix()
+    + measure(basis)
+}
+
+class Operator {
+    + op
+    + dagger()
+    + is_hermitian()
+    + is_unitary()
+    + apply(state)
+}
+
+class Hamiltonian extends Operator {
+    + evolve(state, t, ħ=1)
+}
+
+class Gate extends Operator {
+    + target_qubits
+}
+
+class Measurement {
+    + basis
+    + measure(state)
+}
+
+interface Solver {
+    + evolve(state, hamiltonian, t)
+}
+
+class System {
+    + state
+    + hamiltonian
+    + solver
+    + apply_global_op(op)
+    + apply_local_op(op, targets)
+    + evolve(t)
+}
+
+System --> State
+System --> Solver
+System --> Hamiltonian
+@enduml
