@@ -44,7 +44,7 @@ A `core` directory is included in the project. This directory contains the **bas
 
 This class diagram describes the **classes hierarchy**: 
 
-![core UML Class diagram](https://github.com/andresaugom/QLab/tree/dev/docs/core/QLab-core.png)
+![core UML Class diagram](https://github.com/andresaugom/QLab/tree/dev/docs/core/QLab-core.png "ClassDiagram")
 
 ## Bloch Sphere simulation
 
